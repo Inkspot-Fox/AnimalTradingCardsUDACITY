@@ -1,0 +1,101 @@
+/* add your CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@900&display=swap');
+
+/* Decreased list indentation to allow more room for the fact list text */
+ul {
+  margin-left: -30px;
+}
+
+li {
+  list-style:none;
+  margin-bottom:3px;
+  text-align:left;
+}
+
+/* Styles the labels for the animal's fact list entries */
+li span {
+  font-weight:bold;
+}
+
+/* Provides positioning reference for #waterstain and the animal image */
+#container {
+  width:400px;
+  position:relative;
+}
+
+/* Gives the faint waterstain appearance to the card */
+#waterstain {
+  position:absolute;
+  top:0px;
+  width:390px;
+  z-index:99;
+}
+
+/* Dark grey textured paper */
+.outer {
+  width:390px;
+  height:620px;
+  border: 5px solid black;
+  border-radius: 20px;
+  background-image:url('stormy sky.jpg');
+  background-color:#5e5e5e; /* In case image does not load or can't be read */
+}
+
+/* Light brown textured paper */
+.inner {
+  width:370px;
+  height:600px;
+  margin:10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 4px #000000;
+  background-image:url('sedona.jpg');
+  background-color:#a4764b; /* In case image does not load or can't be read */
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:start;
+}
+
+/* Animal name title bar */
+#titlebar {
+  font: small-caps 30px 'Roboto', sans-serif;
+  width:350px;
+  height:40px;
+  margin-top:8px;
+  border-radius:15px / 20px;
+  border: 5px solid black;
+  box-shadow: inset -1px 1px 2px #ddbcdd;
+  background-image:url('purple-paper.png');
+  background-color:#a34ba4; /* In case image does not load or can't be read */
+  text-align:center;
+}
+
+/* Animal image */
+.inner img {
+  width:300px;
+  height:207px;
+  /*border: 5px ridge #7a5838;*/
+  border: 5px solid black;
+  margin-top:-15px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+/* All of the informational text below the animal image. Includes .coolfact, fact list, and description text */
+.info {
+  font: normal 10pt 'Lato', sans-serif;
+  text-align:justify;
+  width:330px;
+  padding:7px;
+  border-radius:10px;
+  border: 4px double #e2d6ca;
+  background-image:url('fawn.jpg');
+  background-color:#c4ad95; /* In case image does not load or can't be read */
+}
+
+/* Interesting fact text at the top of the .info section, just below the animal image */
+.coolfact {
+  font-size:9pt;
+  font-style:italic;
+  margin:3px 0px 5px 0px;
+}
